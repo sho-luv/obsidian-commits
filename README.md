@@ -5,8 +5,38 @@
 Track &amp; Review changes in obsidian vault or specified project. (Github like commit review)
 
 ## Example
+<img width="841" alt="image" src="https://user-images.githubusercontent.com/1679089/224503771-f78a8afd-a82a-4ef3-9fa4-bb7c71f0e159.png">
 
-<img src="https://raw.githubusercontent.com/Darakah/obsidian-commits/main/images/Example_1_2.png"/>
+Code used for example picture:
+````
+```commits-recents
+project=/
+divWith=7
+divHeight=450
+divAlign=left
+topCommits=4
+```
+```commits-type
+project=/
+divWith=7
+divHeight=450
+divAlign=left
+topCommits=5
+```
+```commits-daily
+project=/
+divWith=15
+divHeight=400
+divAlign=right
+```
+```commits-weekly
+project=/
+divWith=7
+divHeight=400
+divAlign=right
+topCommits=5
+```
+````
 
 ## Features
 - Track an obsidian vault / project's growth 
@@ -27,28 +57,63 @@ Track &amp; Review changes in obsidian vault or specified project. (Github like 
 
 ## Usage
 
-- To display a specific block use its corresponding block id: `commits-recents`, `commits-type`, `commits-weekly`, `commits-daily`
-- Each line represents a certain argument. Arguments are identified by with the following syntax: `argumentName`=`argumentValue` for e.g. to set div width: `divWidth=50` which sets the container width to 50% of the note width. 
-- Each argument must be on a separate line. 
-- Arguments can be in any order
-- Arguments that are not specified are set to default values
-- Arguments are: `project`, `topCommits`, `borderColor`, `gridColor`, `fillColor`, `divWidth`, `divHeight`  and `divAlign`
-- For the blocks `commits-type`, `commits-weekly`, `commits-daily`, parameters are the following:
-   * `Project Path`, by default only the whole vault is tracked and can be shown `/`. To track a new project use the settings tab of the plugin.
-   * `Div width in %` 
-   * `Height in Pixels`
-   * `Fill color`
-   * `Border color`
-   * `Grid color`
-   * `Div container alignment` i.e. `right` or `left`
+  ### Blocks (visual displays)
+---
+There are four types of visual trackers aka (blocks) you can use. To display a specific block, you need to use its corresponding block ID. The available block IDs are:
 
-- For the block `commits-recents` parameters are:
-   * `Project Path`, by default only the whole vault is tracked and can be shown `/`. To track a new project use the settings tab of the plugin.
-   * `Div width in %` 
-   * `Height in Pixels`
-   * `Fill color`
-   * `Top number of recent commits to show for each category`
-   * `Div container alignment` i.e. `right` or `left`
+- `commits-recents`
+- `commits-type`
+- `commits-weekly`
+- `commits-daily`
+
+Basic Block Inmplimentation Example:
+````
+```commits-recents
+```
+````
+
+### Block Configurations
+---
+When using these blocks, you can set arguments to customize the display. Each argument should be on a separate line and should follow the syntax `argumentName=argumentValue`. For example, to set the width of a div container, you can use the argument `divWidth=50`, which sets the width to 50% of the note width.
+
+The order in which the arguments are specified does not affect their behavior, and if an argument is not specified, the plugin will use its default value. However, it is important to note that not all available arguments work with every type of block. Here are the available arguments for this plugin:
+
+- `project` - This argumentName is only configured to track the root by default which is shown as / in the setting of the Commits plugin. If you want to track something other than '/' root. You need to give the name of the (case sensitive) directory name you want to track in the settings. Then you can use this argumentName. 
+- `topCommits` - Only used with the `commits-recents` block, and it displays links to the most recent # of affected documents, such as the last 4 deleted notes.
+- `borderColor` - Change color of charts and graphs borders and text
+- `gridColor` - Change the color of the grids used on charts
+- `fillColor` - Change color of charts and graphs
+- `divWidth` - Change width in percetage %
+- `divHeight` - Change height in pixels
+- `divAlign` - Change alignment to `center`, `left`, or `right`
+
+### Block Arguments Examples
+---
+For the `commits-type`, `commits-weekly`, and `commits-daily` blocks, you can customize the following parameters:
+
+Project Path: The default will track the whole vault from the root which is shown as /. If you want to track a project i.e. track a directory, use the settings tab of the plugin.
+
+- Track project examples:
+  - Track entire obsidian vault: `project=/`
+  - Track everything in folder "Work" and below it: `project=Work`
+  - Note the names are case sensitive.
+- Div width in %, example `divWidth=50`
+- Height in Pixels example `devHeight=300`
+
+
+
+Fill color
+Border color
+Grid color
+Div container alignment, i.e., right or left.
+For the commits-recents block, you can customize the following parameters:
+
+Project Path: By default, only the whole vault is tracked and can be shown as /. If you want to track a new project, use the settings tab of the plugin.
+Div width in %
+Height in Pixels
+Fill color
+Top number of recent commits to show for each category
+Div container alignment, i.e., right or left.
 
 <img src="https://raw.githubusercontent.com/Darakah/obsidian-commits/main/images/Example_2_2.png"/>
 
@@ -67,4 +132,7 @@ Track &amp; Review changes in obsidian vault or specified project. (Github like 
 
 ## Support
 
-[![Github Sponsorship](https://raw.githubusercontent.com/Darakah/Darakah/e0fe245eaef23cb4a5f19fe9a09a9df0c0cdc8e1/icons/github_sponsor_btn.svg)](https://github.com/sponsors/Darakah) [<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="BuyMeACoffee" width="100">](https://www.buymeacoffee.com/darakah)
+[![Github Sponsorship](https://raw.githubusercontent.com/Darakah/Darakah/e0fe245eaef23cb4a5f19fe9a09a9df0c0cdc8e1/icons/github_sponsor_btn.svg)](https://github.com/sponsors/Darakah) [<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="BuyMeACoffee" width="100">](https://www.buymeacoffee.com/darakah)\
+
+
+
