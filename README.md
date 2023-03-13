@@ -40,16 +40,10 @@ divAlign=right
 topCommits=5
 ```
 ````
-
-  ### Some Code
-  ```js
-  function logSomething(something) {
-    console.log('Something', something);
-  }
-  ```
 </details>
 
-
+<details>
+  <summary>See Features:</summary>
 ## Features
 - Track an obsidian vault / project's growth 
 - Growth is divided into 4 categories: 
@@ -67,6 +61,11 @@ topCommits=5
 
 **IMPORTANT: file size change / tag & link change are updated every 5 min!!**
 
+  </details>
+  
+  <details>
+  <summary>See Usage:</summary>
+  
 ## Usage
 
   ### Blocks (visual displays)
@@ -126,6 +125,8 @@ Project Path: By default, only the whole vault is tracked and can be shown as /.
 - Height in Pixels example `devHeight=300`
 - Fill color example `fillColor=Coral`
 - Div container alignment, i.e., `center`, `right` or `left`.
+
+</details>
 
 ## Settings:
 <img width="1101" alt="image" src="https://user-images.githubusercontent.com/1679089/224605873-0dd0fd19-247c-4041-b9c9-395d9e5ef949.png">
