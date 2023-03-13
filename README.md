@@ -128,7 +128,14 @@ Project Path: By default, only the whole vault is tracked and can be shown as /.
 
 </details>
 
+<details>
+  <summary>See Settings:</summary>
+  
 ## Settings:
+
+> **Warning**
+> If you want to track a project, it's important to note that the project name is case sensitive. Additionally, you will need to close and reopen the settings in order to see any changes reflected in the settings section. Projects are simply referred to by their directory names.
+> 
 <img width="1101" alt="image" src="https://user-images.githubusercontent.com/1679089/224605873-0dd0fd19-247c-4041-b9c9-395d9e5ef949.png">
 
 ## Release Notes
@@ -139,10 +146,15 @@ Project Path: By default, only the whole vault is tracked and can be shown as /.
 ### v0.1.2
 - Initial release
 
+</details>
 
-## Support
+<details>
+  <summary>See Support:</summary>
+  
+## Support Original Creator
 
 [![Github Sponsorship](https://raw.githubusercontent.com/Darakah/Darakah/e0fe245eaef23cb4a5f19fe9a09a9df0c0cdc8e1/icons/github_sponsor_btn.svg)](https://github.com/sponsors/Darakah) [<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="BuyMeACoffee" width="100">](https://www.buymeacoffee.com/darakah)\
 
+</details>
 
 
